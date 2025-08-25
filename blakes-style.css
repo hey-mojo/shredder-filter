@@ -215,10 +215,10 @@
   background-size: 65px;
 }
 .sp-flex .feed-type-section td:has([title*="Manual feed"]) {
-  --image-url: url("public/icons/manual-auto-feed/Manual_Grey.png");
+  --image-url: url("public/icons/manual-and-auto-feed/Manual_Grey.png");
 }
 .sp-flex .feed-type-section td:has([title*="Auto Feed"]) {
-  --image-url: url("public/icons/manual-auto-feed/Auto_Grey.png");
+  --image-url: url("public/icons/manual-and-auto-feed/Auto_Grey.png");
 }
 
 /* ====================== END SHREDDERS ================== */
@@ -239,3 +239,4 @@
   }
 }
 /*======================= END GENEERAL ===================*/
+/*https://cdn.jsdelivr.net/gh/hey-mojo/shredder-filter/blakes-style.css*/
