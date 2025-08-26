@@ -99,7 +99,7 @@
           "#filterswrapper a.remove-filter"
         );
         removeFilters.forEach((e) => {
-          if (e.innerText === filterText) {
+          if (e.innerText.trim() === filterText.trim()) {
             targetClearButtton = e;
           }
         });
