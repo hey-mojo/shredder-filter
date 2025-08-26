@@ -105,8 +105,6 @@
           "#filterswrapper a.remove-filter"
         );
         removeFilters.forEach((e) => {
-          console.log("E", e.innerText);
-          console.log(filterText);
           if (e.innerText.trim().startsWith(filterText.trim())) {
             targetClearButtton = e;
           }
