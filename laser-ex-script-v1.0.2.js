@@ -36,7 +36,7 @@
     newDivParent.append(newLoadGrandParent);
 
     const parendNodeTarget = document.querySelector(
-      'div[role="row-section"]:has(.productsgrid_container)'
+      ".col:has(.productsgrid_container)"
     );
     const childNode = document.createElement("div");
     childNode.classList.add("row");
@@ -94,18 +94,20 @@
         clearFilter.textContent = "clear";
         e.querySelector("h5").append(clearFilter);
         let targetClearButtton;
-        const filterText = e.querySelector(".desc")?.innerText;
+        const filterText = e.querySelector(".filterOptionName")?.innerText;
         const removeFilters = document.querySelectorAll(
           "#filterswrapper a.remove-filter"
         );
         removeFilters.forEach((e) => {
-          if (e.innerText === filterText) {
+          if (e.innerText.trim().startsWith(filterText.trim())) {
             targetClearButtton = e;
           }
         });
-        clearFilter.addEventListener("click", () => {
-          targetClearButtton.click();
-        });
+        if (targetClearButtton) {
+          clearFilter.addEventListener("click", () => {
+            targetClearButtton.click();
+          });
+        }
       });
       const removeFilterWrapper = filterWrapper.querySelector(
         ".remove-filter-wrapper"
