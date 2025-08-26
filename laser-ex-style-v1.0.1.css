@@ -10,6 +10,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.filter-wrapper {
+  margin-bottom: 20px;
+}
 .sp-flex > section {
   width: calc(25% - var(--padding-spacer-sp));
   border: var(--color-bg-sp) 2px solid;
