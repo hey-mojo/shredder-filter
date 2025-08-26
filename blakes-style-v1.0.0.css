@@ -5,7 +5,7 @@
   --color-url: #fff;
 }
 .filter-wrapper {
-  margin-top: 30px;
+  margin-block: 30px;
 }
 .sp-flex {
   display: flex;
@@ -145,50 +145,32 @@
   width: 100px;
   background-position-y: center;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="5-6 Sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="5-6 Sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-5-6.jpg");
   display: block;
   order: 1;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="7-8 Sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="7-8 Sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-7-8.jpg");
   display: block;
   order: 2;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="9-11 sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="9-11 sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-9-11.jpg");
   display: block;
   order: 3;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="12-15 Sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="12-15 Sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-12-15.jpg");
   display: block;
   order: 4;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="15+ Sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="15+ Sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-15plus.jpg");
   display: block;
   order: 5;
 }
-.sp-flex
-  .sheet-capacity-70gsm-section
-  .tr-filter
-  td:has([title*="80+ Sheets"]) {
+.sp-flex .sheet-capacity-70gsm-section .tr-filter:has([title*="80+ Sheets"]) {
   --image-url: url("public/icons/sheet-capacity/Sheet-Cap-80-Auto.jpg");
   display: block;
   order: 6;
