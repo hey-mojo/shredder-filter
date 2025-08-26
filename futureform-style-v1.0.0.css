@@ -110,6 +110,7 @@
   background-position-x: center;
   background-position-y: 5px;
   background-blend-mode: multiply;
+  font-size: 0.85rem;
 }
 .clear-filter {
   margin-left: 8px;
