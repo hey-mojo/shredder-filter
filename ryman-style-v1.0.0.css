@@ -126,13 +126,13 @@
   background-position-y: 15px;
 }
 .sp-flex .environment-section label a[title*="Deskside"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/environment/Enviro-occasional.jpg");
+  --image-url: url("public/icons/environment/Enviro-occasional.jpg");
 }
 .sp-flex .environment-section label a[title*="Small Office"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/environment/Enviro-moderate.jpg");
+  --image-url: url("public/icons/environment/Enviro-moderate.jpg");
 }
 .sp-flex .environment-section label a[title*="Large Office"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/environment/Enviro-high.jpg");
+  --image-url: url("public/icons/environment/Enviro-high.jpg");
 }
 /* ===== Sheet Capacity ===== */
 
@@ -146,32 +146,32 @@
   background-position-y: center;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="5-6 Sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-5-6.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-5-6.jpg");
   display: block;
   order: 1;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="7-8 Sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-7-8.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-7-8.jpg");
   display: block;
   order: 2;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="9-11 sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-9-11.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-9-11.jpg");
   display: block;
   order: 3;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="12-15 Sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-12-15.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-12-15.jpg");
   display: block;
   order: 4;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="15+ Sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-15plus.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-15plus.jpg");
   display: block;
   order: 5;
 }
 .sp-flex .sheet-capacity-70gsm-section label:has(a[title*="80+ Sheets"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/sheet-capacity/Sheet-Cap-80-Auto.jpg");
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-80-Auto.jpg");
   display: block;
   order: 6;
 }
@@ -181,26 +181,26 @@
   background-position-y: 12px;
 }
 .sp-flex .cut-type-section label a[title*="Strip Cut"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/cut-types/ENG_StripCut_Black.png");
+  --image-url: url("public/icons/cut-types/ENG_StripCut_Black.png");
 }
 .sp-flex .cut-type-section label a[title*="Cross Cut"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/cut-types/ENG_CrossCut_Black.png");
+  --image-url: url("public/icons/cut-types/ENG_CrossCut_Black.png");
 }
 .sp-flex .cut-type-section label a[title*="Mini cut"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/cut-types/ENG_MiniCut_Black.png");
+  --image-url: url("public/icons/cut-types/ENG_MiniCut_Black.png");
 }
 .sp-flex .cut-type-section label a[title*="Micro Cut"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/cut-types/ENG_MicroCut_Black.png");
+  --image-url: url("public/icons/cut-types/ENG_MicroCut_Black.png");
 }
 /* ===== Feed Type ===== */
 .sp-flex.shredders .feed-type-section label a {
   background-size: 65px;
 }
 .sp-flex .feed-type-section label a[title*="Manual feed"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/manual-auto-feed/Manual_Grey.png");
+  --image-url: url("public/icons/manual-and-auto-feed/Manual_Grey.png");
 }
 .sp-flex .feed-type-section label a[title*="Auto Feed"] {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/manual-auto-feed/Auto_Grey.png");
+  --image-url: url("public/icons/manual-and-auto-feed/Auto_Grey.png");
 }
 /* ===== Also Shreds ===== */
 .sp-flex.shredders .also-shreds-section label {
@@ -210,19 +210,19 @@
   background-position-y: 12px;
 }
 .sp-flex .also-shreds-section label.credit-cards:has(a[title*="Yes"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/also-shreds/AlsoShred_Card_Back.png");
+  --image-url: url("public/icons/also-shreds/AlsoShred_Card_Back.png");
   display: block;
 }
 .sp-flex .also-shreds-section label.staples:has(a[title*="Yes"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/also-shreds/AlsoShred_Staple_Back.png");
+  --image-url: url("public/icons/also-shreds/AlsoShred_Staple_Back.png");
   display: block;
 }
 .sp-flex .also-shreds-section label.cds:has(a[title*="Yes"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/also-shreds/AlsoShred_CD_Back.png");
+  --image-url: url("public/icons/also-shreds/AlsoShred_CD_Back.png");
   display: block;
 }
 .sp-flex .also-shreds-section label.paperclips:has(a[title*="Yes"]) {
-  --image-url: url("https://eu.evocdn.io/dealer/1021/content/media/SP_Test_Folder/fellowes/also-shreds/AlsoShred_Clip_Back.png");
+  --image-url: url("public/icons/also-shreds/AlsoShred_Clip_Back.png");
   display: block;
 }
 /* ====================== END SHREDDERS ================== */
