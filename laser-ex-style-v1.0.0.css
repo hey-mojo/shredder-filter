@@ -13,7 +13,8 @@
 .sp-flex > section {
   width: calc(25% - var(--padding-spacer-sp));
   border: var(--color-bg-sp) 2px solid;
-  padding: var(--padding-spacer-sp) calc(var(--padding-spacer-sp) / 3);
+  padding: calc(var(--padding-spacer-sp) * 1.3)
+    calc(var(--padding-spacer-sp) / 3);
   border-radius: var(--padding-spacer-sp);
 }
 

@@ -94,7 +94,7 @@
         clearFilter.textContent = "clear";
         e.querySelector("h5").append(clearFilter);
         let targetClearButtton;
-        const filterText = e.querySelector(".desc")?.innerText;
+        const filterText = e.querySelector(".filterOptionName")?.innerText;
         const removeFilters = document.querySelectorAll(
           "#filterswrapper a.remove-filter"
         );
