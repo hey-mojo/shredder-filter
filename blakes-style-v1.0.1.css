@@ -63,7 +63,7 @@
 .filter-wrapper .ph-item {
   justify-content: center;
   gap: 15px;
-  padding: 15px;
+  padding: 15 0px;
   background: #fff;
 }
 .filter-wrapper .ph-item::before {
@@ -216,8 +216,12 @@
   }
 }
 @media only screen and (max-width: 550px) {
-  .sp-flex > section {
+  .sp-flex > section,
+  .filter-wrapper .ph-row {
     width: 100%;
+  }
+  .filter-wrapper .ph-row {
+    height: 200px;
   }
 }
 /*======================= END GENEERAL ===================*/
