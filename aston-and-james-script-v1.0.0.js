@@ -111,15 +111,11 @@
         );
         removeFilters.forEach((el) => {
           if (filterText.startsWith(el.childNodes[2].wholeText.trim())) {
-            console.log("true");
             targetClearButtton = el;
-            console.log(targetClearButtton);
           }
         });
         clearFilter.addEventListener("click", () => {
           targetClearButtton.click();
-          console.log("clicked");
-          console.log(targetClearButtton);
         });
       });
       const removeFilterWrapper = filterWrapper.querySelector(
