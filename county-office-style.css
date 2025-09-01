@@ -1,0 +1,254 @@
+/* ===== GENERAL STYLING FOR FILTER SECTION ===== */
+:root {
+  --color-bg-sp: #f4f0f0;
+  --padding-spacer-sp: 15px;
+  --color-url: #fff;
+}
+.sp-flex {
+  display: flex;
+  gap: var(--padding-spacer-sp);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter-wrapper {
+  margin-bottom: 20px;
+}
+.sp-flex > section {
+  width: calc(25% - var(--padding-spacer-sp));
+  border: var(--color-bg-sp) 2px solid;
+  padding: calc(var(--padding-spacer-sp) * 1.3)
+    calc(var(--padding-spacer-sp) / 3);
+  border-radius: var(--padding-spacer-sp);
+}
+
+.sp-flex label {
+  margin: 0;
+}
+.sp-flex h5 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--padding-spacer-sp);
+}
+.sp-flex label a {
+  border: var(--color-bg-sp) 1px solid;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px;
+  color: #574c4e;
+  outline: transparent solid 2px;
+  transition: outline-color 0.35s;
+}
+.sp-flex label a:hover,
+.sp-flex label a:focus-visible {
+  outline-color: #d9d9d9;
+}
+.sp-flex section {
+  background-color: #fcfcfc;
+  position: relative;
+}
+.sp-flex section > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+.sp-flex label a p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+}
+.sp-flex p.count {
+  display: none;
+}
+.filter-wrapper .ph-row {
+  width: calc(25% - var(--padding-spacer-sp));
+  border: var(--color-bg-sp) 2px solid;
+  padding: var(--padding-spacer-sp);
+  border-radius: var(--padding-spacer-sp);
+  height: 300px;
+  background-color: #f7f7f7;
+  flex: revert;
+}
+.filter-wrapper .ph-item {
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 0;
+  background: #fff;
+}
+.filter-wrapper .ph-item::before {
+  background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 97%, 0) 46%,
+      hsla(0, 0%, 100%, 0.7) 50%,
+      hsla(0, 0%, 97%, 0) 54%
+    )
+    50% 50%;
+}
+.filter-wrapper .shredders .no-pointer-events {
+  border-color: #aaa;
+  background-color: #eee;
+}
+/*==================================*/
+/* ============== STYLING FOR SHREDDERS ================ */
+/* ===== GENERAL ===== */
+.sp-flex.shredders label a span {
+  margin-top: 65px;
+  font-size: 0.8rem;
+}
+.sp-flex.shredders label a i,
+.sp-flex.shredders label a .filterOptionCount {
+  display: none;
+}
+.sp-flex.shredders label a {
+  width: 110px;
+  height: 100px;
+  background: var(--image-url);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 5px;
+  background-blend-mode: multiply;
+}
+.clear-filter {
+  margin-left: 8px;
+  font-weight: 100;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.clear-filter::before {
+  content: "x";
+  margin-right: 3px;
+}
+.clear-all-wrapper {
+  text-align: center;
+  padding-block: 25px;
+  /*border-top: 1px solid #eee;
+  margin-top: 25px;*/
+}
+/* ===== Environment ===== */
+.sp-flex.shredders .environment-section label a {
+  background-position-y: 15px;
+}
+.sp-flex .environment-section label a[title*="Deskside"] {
+  --image-url: url("public/icons/environment/Enviro-occasional.jpg");
+}
+.sp-flex .environment-section label a[title*="Small Office"] {
+  --image-url: url("public/icons/environment/Enviro-moderate.jpg");
+}
+.sp-flex .environment-section label a[title*="Large Office"] {
+  --image-url: url("public/icons/environment/Enviro-high.jpg");
+}
+/* ===== Sheet Capacity ===== */
+
+.sp-flex .sheet-capacity-70gsm-section label a {
+  font-size: 0;
+}
+.sp-flex.shredders .sheet-capacity-70gsm-section label a {
+  background-position-y: center;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="5-6 Sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-5-6.jpg");
+  display: block;
+  order: 1;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="7-8 Sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-7-8.jpg");
+  display: block;
+  order: 2;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="9-11 sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-9-11.jpg");
+  display: block;
+  order: 3;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="12-15 Sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-12-15.jpg");
+  display: block;
+  order: 4;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="15+ Sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-15plus.jpg");
+  display: block;
+  order: 5;
+}
+.sp-flex .sheet-capacity-70gsm-section label:has(a[title*="80+ Sheets"]) {
+  --image-url: url("public/icons/sheet-capacity/Sheet-Cap-80-Auto.jpg");
+  display: block;
+  order: 6;
+}
+/* ===== Cut Type ===== */
+.sp-flex.shredders .cut-type-section label a {
+  background-size: 38px;
+  background-position-y: 12px;
+}
+.sp-flex .cut-type-section label a[title*="Strip Cut"] {
+  --image-url: url("public/icons/cut-types/ENG_StripCut_Black.png");
+}
+.sp-flex .cut-type-section label a[title*="Cross Cut"] {
+  --image-url: url("public/icons/cut-types/ENG_CrossCut_Black.png");
+}
+.sp-flex .cut-type-section label a[title*="Mini cut"] {
+  --image-url: url("public/icons/cut-types/ENG_MiniCut_Black.png");
+}
+.sp-flex .cut-type-section label a[title*="Micro Cut"] {
+  --image-url: url("public/icons/cut-types/ENG_MicroCut_Black.png");
+}
+/* ===== Feed Type ===== */
+.sp-flex.shredders .feed-type-section label a {
+  background-size: 65px;
+}
+.sp-flex .feed-type-section label a[title*="Manual feed"] {
+  --image-url: url("public/icons/manual-and-auto-feed/Manual_Grey.png");
+}
+.sp-flex .feed-type-section label a[title*="Auto Feed"] {
+  --image-url: url("public/icons/manual-and-auto-feed/Auto_Grey.png");
+}
+/* ===== Also Shreds ===== */
+.sp-flex.shredders .also-shreds-section label {
+  display: none;
+}
+.sp-flex.shredders .also-shreds-section label a {
+  background-position-y: 12px;
+}
+.sp-flex .also-shreds-section label.credit-cards:has(a[title*="Yes"]) {
+  --image-url: url("public/icons/also-shreds/AlsoShred_Card_Back.png");
+  display: block;
+}
+.sp-flex .also-shreds-section label.staples:has(a[title*="Yes"]) {
+  --image-url: url("public/icons/also-shreds/AlsoShred_Staple_Back.png");
+  display: block;
+}
+.sp-flex .also-shreds-section label.cds:has(a[title*="Yes"]) {
+  --image-url: url("public/icons/also-shreds/AlsoShred_CD_Back.png");
+  display: block;
+}
+.sp-flex .also-shreds-section label.paperclips:has(a[title*="Yes"]) {
+  --image-url: url("public/icons/also-shreds/AlsoShred_Clip_Back.png");
+  display: block;
+}
+/* ====================== END SHREDDERS ================== */
+@media only screen and (max-width: 1200px) {
+  .sp-flex > section,
+  .filter-wrapper .ph-row {
+    width: calc(50% - var(--padding-spacer-sp));
+  }
+}
+@media only screen and (max-width: 991px) {
+  .filter-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .sp-flex > section,
+  .filter-wrapper .ph-row {
+    width: 100%;
+  }
+  .filter-wrapper .ph-row {
+    height: 200px;
+  }
+}
+/*======================= END GENEERAL ===================*/
