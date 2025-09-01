@@ -111,6 +111,11 @@
   background-position-y: 5px;
   background-blend-mode: multiply;
 }
+.sp-flex.shredders label:has(.active) a {
+  pointer-events: none;
+  background-color: #eee;
+  border-color: #aaa;
+}
 .clear-filter {
   margin-left: 8px;
   font-weight: 100;

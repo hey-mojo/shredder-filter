@@ -28,8 +28,8 @@
 .b${e.id} .ribboncart {
 	 background: url("${badgeImageUrl}${e.image_name}") no-repeat center !important;
 	 background-size: contain !important;
-	 width: 87px;
-	 height: 87px;
+	 width: 75px;
+	 height: 75px;
 }
  .b${e.id} .ribboncart {
 	 width: 40px;
@@ -41,6 +41,11 @@
 .b${e.id} .ribboncart-wrapper, 
 .b${e.id} span {
 	 display: none;
+}
+.b${e.id}.ribbon-wrapper {
+   transform: scale(1);
+   top: 3px;
+   left: 23px;
 }
 `;
   });
