@@ -166,10 +166,8 @@
       }
     };
 
-    if (document.querySelector("#filterswrapperhorizontal.hide")) {
-      const filtersWrapper = document.getElementById(
-        "filterswrapperhorizontal"
-      );
+    if (document.querySelector("#filterswrapper.hide")) {
+      const filtersWrapper = document.getElementById("filterswrapper");
       const filtersWrapperobserver = new MutationObserver(
         (mutationsList, obs) => {
           for (const mutation of mutationsList) {
