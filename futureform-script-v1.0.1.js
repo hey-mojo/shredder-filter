@@ -1,9 +1,7 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if (
-    window.location.pathname === "/search" &&
-    params.get("query").startsWith("shredder")
-  ) {
+  const query = params.get("query") || "";
+  if (window.location.pathname === "/search" && /shredders?/.test(query)) {
     const filterApply = [
       "Environment",
       "Sheet Capacity (70gsm)",
@@ -36,7 +34,7 @@
     newDivParent.append(newLoadGrandParent);
 
     const parendNodeTarget = document.querySelector(
-      ".col .row:has(.productsgrid_container)"
+      ".col:has(.productsgrid_container)"
     );
     const childNode = document.createElement("div");
     childNode.classList.add("row");
@@ -50,19 +48,19 @@
     const formingFilter = () => {
       newLoadGrandParent.classList.add("hide");
       newDivChild.classList.remove("hide");
-      const filterWrapper = document.querySelector("#filtersModal");
+      const filterWrapper = document.querySelector("#filterswrapper");
       //select all filters
       const filterSections = document.querySelectorAll(
-        "#filtersModal .filter-section"
+        "#filterswrapper .filter-section"
       );
       filterSections.forEach((section) => {
-        const sectionTitle = section.querySelector(".filter-section-header h3");
+        const sectionTitle = section.querySelector(".filter-section-header h5");
         if (sectionTitle) {
           const text = sectionTitle.innerText.trim().toLowerCase();
           const match = filterApply.some((item) => item.toLowerCase() === text);
           if (match) {
             const sectionLabels = section.querySelectorAll(
-              ".modal-filter-value-table .tr-filter"
+              ".filter-options label"
             );
 
             const newSectionElement = document.createElement("section");
@@ -77,17 +75,13 @@
             );
             newSectionElement.append(newSectionTitle);
             sectionLabels.forEach((label) => {
-              const newLabel = label.cloneNode(true);
-              const newLabelSpan = newLabel.querySelector("span");
-              if (newLabelSpan)
-                newLabelSpan.textContent = newLabelSpan.textContent.replace(
-                  /\s*\(\d+\)\s*$/,
-                  ""
-                );
-              newLabel.addEventListener("click", () => {
-                label.click();
-              });
-              newSectionDiv.append(newLabel);
+              const clonedLabel = label.cloneNode(true);
+              let clonedLink = clonedLabel.querySelector("a");
+              clonedLink.textContent = clonedLink.textContent.replace(
+                /\s*\(\d+\)\s*$/,
+                ""
+              );
+              newSectionDiv.append(clonedLabel);
             });
             newSectionElement.append(newSectionDiv);
             newDivChild.append(newSectionElement);
@@ -99,27 +93,28 @@
       );
       activeFilter.forEach((e) => {
         const clearFilter = document.createElement("a");
+        clearFilter.href = "javascript:;";
         clearFilter.classList.add("clear-filter");
         clearFilter.textContent = "clear";
-        clearFilter.setAttribute("role", "button");
-        clearFilter.setAttribute("tabindex", "0");
         e.querySelector("h5").append(clearFilter);
         let targetClearButtton;
-        const filterText = e.querySelector("span")?.innerText;
+        const filterText = e.querySelector("label a")?.innerText;
         const removeFilters = document.querySelectorAll(
-          "#filtersModal a.remove-filter"
+          "#filterswrapper a.remove-filter"
         );
-        removeFilters.forEach((el) => {
-          if (filterText.startsWith(el.childNodes[2].wholeText.trim())) {
-            targetClearButtton = el;
+        removeFilters.forEach((e) => {
+          if (e.innerText.trim().startsWith(filterText.trim())) {
+            targetClearButtton = e;
           }
         });
-        clearFilter.addEventListener("click", () => {
-          targetClearButtton.click();
-        });
+        if (targetClearButtton) {
+          clearFilter.addEventListener("click", () => {
+            targetClearButtton.click();
+          });
+        }
       });
       const removeFilterWrapper = filterWrapper.querySelector(
-        ".reset-filter-button"
+        ".remove-filter-wrapper"
       );
       if (removeFilterWrapper) {
         const clearAllWrapper = document.createElement("div");
@@ -133,10 +128,8 @@
       }
     };
 
-    if (document.querySelector("#filterswrapperhorizontal.hide")) {
-      const filtersWrapper = document.getElementById(
-        "filterswrapperhorizontal"
-      );
+    if (document.querySelector("#filterswrapper.hide")) {
+      const filtersWrapper = document.getElementById("filterswrapper");
       const filtersWrapperobserver = new MutationObserver(
         (mutationsList, obs) => {
           for (const mutation of mutationsList) {

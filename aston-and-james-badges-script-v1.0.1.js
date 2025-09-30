@@ -14,9 +14,13 @@
     { id: 6039, image_name: "Cashback-45-UK.png" },
     { id: 6040, image_name: "Cashback-50-UK.png" },
     { id: 6041, image_name: "Cashback-55-UK.png" },
+    { id: 6137, image_name: "Cashback-60-UK.png" },
     { id: 6042, image_name: "Cashback-80-UK.png" },
+    { id: 6139, image_name: "Cashback-100-UK.png" },
     { id: 6043, image_name: "Cashback-105-UK.png" },
+    { id: 6140, image_name: "Cashback-120-UK.png" },
     { id: 6044, image_name: "Cashback-130-UK.png" },
+    { id: 6141, image_name: "Cashback-160-UK.png" },
   ];
 
   const badgesStyleElement = document.createElement("style");

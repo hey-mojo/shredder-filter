@@ -1,9 +1,7 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if (
-    window.location.pathname === "/search" &&
-    params.get("query").startsWith("shredder")
-  ) {
+  const query = params.get("query") || "";
+  if (window.location.pathname === "/search" && /shredders?/.test(query)) {
     const filterApply = [
       "Environment",
       "Sheet Capacity (70gsm)",
@@ -36,7 +34,7 @@
     newDivParent.append(newLoadGrandParent);
 
     const parendNodeTarget = document.querySelector(
-      'div[role="row-section"]:has(.productsgrid_container)'
+      ".col:has(.productsgrid_container)"
     );
     const childNode = document.createElement("div");
     childNode.classList.add("row");
@@ -76,9 +74,15 @@
                 .replace(/[^a-z0-9-]/g, "")}-section`
             );
             newSectionElement.append(newSectionTitle);
-            sectionLabels.forEach((label) =>
-              newSectionDiv.append(label.cloneNode(true))
-            );
+            sectionLabels.forEach((label) => {
+              const clonedLabel = label.cloneNode(true);
+              let clonedLink = clonedLabel.querySelector("a");
+              clonedLink.textContent = clonedLink.textContent.replace(
+                /\s*\(\d+\)\s*$/,
+                ""
+              );
+              newSectionDiv.append(clonedLabel);
+            });
             newSectionElement.append(newSectionDiv);
             newDivChild.append(newSectionElement);
           }
@@ -94,7 +98,7 @@
         clearFilter.textContent = "clear";
         e.querySelector("h5").append(clearFilter);
         let targetClearButtton;
-        const filterText = e.querySelector(".desc")?.innerText;
+        const filterText = e.querySelector("label a")?.innerText;
         const removeFilters = document.querySelectorAll(
           "#filterswrapper a.remove-filter"
         );

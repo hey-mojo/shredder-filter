@@ -1,9 +1,7 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if (
-    window.location.pathname === "/search" &&
-    params.get("query").startsWith("shredder")
-  ) {
+  const query = params.get("query") || "";
+  if (window.location.pathname === "/search" && /shredders?/.test(query)) {
     const filterApply = [
       "Environment",
       "Sheet Capacity (70gsm)",
