@@ -1,13 +1,14 @@
 (() => {
-  const badgeImageUrl =
-    "https://eu.evocdn.io/dealer/1021/content/media/Fellowes Cashback Folder/";
+  const badgeImageUrl = "https://eu.evocdn.io/dealer/1021/content/media/Fellowes Cashback Folder/";
 
   const badgesInfo = [
+    { id: 6510, image_name: "Cashback-5-UK.png" },
     { id: 6063, image_name: "Cashback-8-UK.png" },
     { id: 6064, image_name: "Cashback-10-UK.png" },
     { id: 6065, image_name: "Cashback-15-UK.png" },
     { id: 6066, image_name: "Cashback-17-UK.png" },
     { id: 6005, image_name: "Cashback-20-UK.png" },
+    { id: 6408, image_name: "Cashback-25-UK.png" },
     { id: 6006, image_name: "Cashback-30-UK.png" },
     { id: 6007, image_name: "Cashback-35-UK.png" },
     { id: 6008, image_name: "Cashback-40-UK.png" },
@@ -16,6 +17,7 @@
     { id: 6011, image_name: "Cashback-55-UK.png" },
     { id: 6142, image_name: "Cashback-60-UK.png" },
     { id: 6012, image_name: "Cashback-80-UK.png" },
+    { id: 6409, image_name: "Cashback-90-UK.png" },
     { id: 6143, image_name: "Cashback-100-UK.png" },
     { id: 6013, image_name: "Cashback-105-UK.png" },
     { id: 6144, image_name: "Cashback-120-UK.png" },

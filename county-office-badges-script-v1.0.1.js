@@ -1,6 +1,5 @@
 (() => {
-  const badgeImageUrl =
-    "https://eu.evocdn.io/dealer/1021/content/media/Fellowes Cashback Folder/";
+  const badgeImageUrl = "https://eu.evocdn.io/dealer/1021/content/media/Fellowes Cashback Folder/";
 
   const badgesInfo = [
     { id: 6079, image_name: "Cashback-8-UK.png" },
