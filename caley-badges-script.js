@@ -22,6 +22,7 @@
     { id: 6033, image_name: "Cashback-105-UK.png" },
     { id: 6152, image_name: "Cashback-120-UK.png" },
     { id: 6034, image_name: "Cashback-130-UK.png" },
+    { id: 6658, image_name: "Cashback-150-UK.png" },
     { id: 6153, image_name: "Cashback-160-UK.png" },
   ];
 
