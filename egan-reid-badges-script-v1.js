@@ -38,6 +38,7 @@
 	 background-size: contain !important;
 	 width: 60px;
 	 height: 60px!important;
+   margin-left: -7px;
 }
  .b${e.id} .ribboncart {
 	 width: 40px;
