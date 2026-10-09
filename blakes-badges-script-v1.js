@@ -36,8 +36,9 @@
 .b${e.id} .ribboncart {
 	 background: url("${badgeImageUrl}${e.image_name}") no-repeat center !important;
 	 background-size: contain !important;
-	 width: 87px;
-	 height: 87px;
+	 width: 80px;
+	 height: 80px;
+   margin-left: 10px;
 }
  .b${e.id} .ribboncart {
 	 width: 40px;
